@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 200px;
+            width: 200px;
+            background-color: rgba(153, 205, 50, 0.562);
+            margin-top: 100px;
+            transition: .5s;
+        }
+        button{
+            transition : .5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "two">Javascript Lec 4 : </h1>
+    <h1 class = "two">Hello World</h1>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam nesciunt delectus fugiat ut commodi corporis repellendus tenetur. Necessitatibus iusto et aperiam ipsam dolore error doloremque repellendus, delectus rerum!</p>
+    <hr>
+    <h1 id = "new">Old Text</h1>
+
+    <hr>
+    <button onclick="work(),also(),do1()" onmouseenter="new1()" onmouseleave="ret2()">Change text</button>
+
+    <div id = "container" onmouseenter="change()" onmouseleave="ret()">
+
+    </div>
+
+    <script>
+        console.log(document); // selects the entire document
+        
+        console.log(document.querySelector("h1")); // selects the first element from the query 
+
+        console.log(document.querySelector(".two")); // dom manipulation using class but only selects the first element with the mentioned class
+
+        console.log(document.querySelectorAll("h1")); // selects all element with the mentioned attribute
+
+        console.log(document.querySelectorAll(".two")); // Selects all element with the mentioned class
+
+        console.log(document.querySelectorAll("h1")[0]); // Selects the specific location of element from the attributes 
+        console.log(document.querySelectorAll("h1")[1]); // as two elements are present so selecting both the elements according to their positon
+
+        // Retrieving the text from the tag using .innerText
+
+        console.log(document.querySelector("p").innerText); // cant use querySelectorAll
+
+        // Changing the text from the tag mentioned 
+
+        
+
+        // Event Handling : 
+
+        function work(){
+            console.log("Button Clicked");
+            console.log(document.querySelector("#new").innerText = "Hello World");
+        }
+        function also(){
+            console.log(document.querySelector("#container").innerText = "Function Executed");
+        }
+
+        // Using Inner HTML to manipulate text with any tags possible init
+
+        function do1()
+        {
+            console.log(document.querySelector("#container").innerHTML= "<p> This is the use of innerhtml keyword </p>");
+            document.querySelector("#container").style.backgroundColor="red";
+            document.querySelector("#container").style.fontSize="25px";
+            document.querySelector("#container").style.margin="auto";
+            document.querySelector("#container").style.marginTop="100px";
+            
+            
+            // The main purpose of using innerhtml over innertext is manipulating the content inside it.
+            // In innerText, only text can be added 
+            // But in innerHTML, any possible html tags can be added and work can be done
+        }
+        function change()
+        {
+            document.querySelector("#container").style.width="300px";
+        }
+        function ret()
+        {
+            document.querySelector("#container").style.width="200px";
+
+        }
+        function new1()
+        {
+            document.querySelector("button").style.padding="10px";
+            document.querySelector("button").style.color="black";
+            document.querySelector("button").style.backgroundColor="white";
+        }
+        function ret2()
+        {
+            document.querySelector("button").style.padding="0";
+            document.querySelector("button").style.color="";
+            document.querySelector("button").style.backgroundColor="";
+        }
+
+
+    </script>
+</body>
+</html>

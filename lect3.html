@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lecture 3 of Javascipt : </h1>
+    <script>
+
+        // Remember everything will be displayed in console of inspect element in webpage
+
+        // loops in javascript :
+
+        //while
+        //do while
+        // for
+
+        // Syntax for while condition : 
+
+
+        /*
+        while (condn)
+        {
+        }
+        */
+
+        // Example:
+
+        let num = 1;
+        while(num<10)
+        {
+            console.log("Hello");
+            num++;
+        }
+
+        /*
+        do while loop:-
+
+        syntax:-
+
+        do 
+        {
+
+        }
+        while(condn);
+        */
+
+        //example:-
+
+        let num1 = 11;
+
+        do{
+            console.log("Hello World");
+            num1++;
+        }
+        while(num1<=10);
+
+        // for
+
+        for(let n = 0;n<10;n++)
+        {
+            console.log(n);
+        }
+        // arrays 
+
+        let name1 = ["om","rishi","arnav","roshan","harsh"];
+        
+        console.log(name1);
+        for(let i = 0;i<5;i++)
+        {
+            console.log("Name of "+(i+1)+" is "+name1[i]);
+        }
+
+        // class and objects : 
+
+        // object -- collection of properties
+
+        // example -- i am an object with the properties of a human
+
+        let student = {
+            name :"Om",
+            age : 19,
+            city : "Mumbai"
+        }
+        console.log(student.age);
+
+        // array and objects both in one 
+
+        let new1  = [{
+            name : "Om", age:19, city : "Mumbai"
+        },
+        {
+        name : "Rishi", age : 20, city : "Dombivali" 
+        }
+        ];
+        console.log(new1);
+
+    </script>
+</body>
+</html>
